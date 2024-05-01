@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Logout from "./Logout";
-
+import Header from "../Mainpage/Header";
 function Apicall() {
   const [data, setData] = useState(null);
 
@@ -13,7 +12,7 @@ function Apicall() {
       axios
         .get("https://backend-4-k5vs.onrender.com/protected", {
           headers: {
-            Authorization: token, // Assuming token stored with "Bearer " prefix
+            authorization: token, // Assuming token stored with "Bearer " prefix
           },
         })
         .then((response) => {
@@ -27,6 +26,7 @@ function Apicall() {
 
   return (
     <div>
+      <Header />
       {data ? (
         <div>
           <p>Message: {data.message}</p>
@@ -35,7 +35,6 @@ function Apicall() {
       ) : (
         <p>Loading...</p>
       )}
-      <Logout />
     </div>
   );
 }

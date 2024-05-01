@@ -1,0 +1,58 @@
+/* App.css */
+
+/* Navbar styles */
+.navbar {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff; /* Text color */
+  padding: 10px 0; /* Padding for the navbar */
+  position: relative;
+}
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20;
+}
+.navbar-brand a {
+  color: #fff; /* Brand/logo text color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.5rem; /* Adjust brand/logo font size */
+}
+
+.navbar-toggler {
+  border: none; /* Remove default button border */
+  background: transparent; /* Transparent background */
+  color: #fff; /* Menu toggle icon color */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 1.5rem; /* Menu toggle icon size */
+}
+
+.navbar-collapse {
+  display: none; /* Hide the menu by default */
+}
+
+.navbar-collapse.open {
+  display: block; /* Display the menu when open */
+}
+
+.navbar-nav {
+  list-style-type: none; /* Remove bullet points from the list */
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 15px; /* Adjust space between menu items */
+}
+
+.nav-link {
+  color: #fff; /* Menu item text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Padding for menu items */
+}
+
+/* Hover effect for menu items */
+.nav-link:hover {
+  background-color: #555; /* Darker background color on hover */
+}

@@ -28,9 +28,11 @@ const LoginForm = () => {
       );
 
       if (response.status === 200) {
-        localStorage.setItem("token", response.headers.authorization);
+        localStorage.setItem("token", response.data.token);
+
         setMessage("Login successful");
         navigate("/about");
+        console.log(response.data.token);
       }
     } catch (error) {
       setMessage("Invalid username or password");
