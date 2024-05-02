@@ -15,11 +15,14 @@ function Apicall() {
       if (token) {
         setLoading(true);
         try {
-          const response = await axios.get("http://localhost:800/courses", {
-            headers: {
-              Authorization: token,
-            },
-          });
+          const response = await axios.get(
+            "https://backend-4-k5vs.onrender.com/courses",
+            {
+              headers: {
+                Authorization: token,
+              },
+            }
+          );
           setCourses(response.data.courses);
           console.log(response.data.courses);
         } catch (error) {
