@@ -23,7 +23,7 @@ const LoginForm = () => {
 
     try {
       const response = await axios.post(
-        "https://backend-4-k5vs.onrender.com/signup",
+        "https://backend-4-k5vs.onrender.com/login",
         formData
       );
 
