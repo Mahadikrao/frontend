@@ -1,0 +1,50 @@
+/* CourseCard.css */
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.course-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 15px;
+}
+
+.course-title {
+  margin-top: 0;
+  color: #333;
+}
+
+.course-description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.course-duration,
+.course-instructor,
+.course-price {
+  font-size: 0.85em;
+  color: #333;
+  margin: 5px 0;
+}

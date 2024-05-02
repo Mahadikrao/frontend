@@ -1,15 +1,31 @@
+import { useState } from "react";
+
 function Logout() {
-  // Function to handle logout
-  const handleLogout = () => {
-    // Clear the JWT token from local storage
-    localStorage.removeItem("Token");
-    // Redirect the user to the login page or any other desired page
-    window.location.href = "/login"; // Replace '/login' with the URL of your login page
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+
+  const handleLogout = async () => {
+    setIsLoggingOut(true);
+    try {
+      // Potentially inform the backend about the logout
+      // await axios.post('/api/logout');
+
+      // Clear the JWT token from local storage
+      localStorage.removeItem("token");
+
+      // Redirect the user to the login page
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Logout failed:", error);
+      setIsLoggingOut(false);
+      // Optionally show an error message to the user
+    }
   };
 
   return (
     <div>
-      <button onClick={handleLogout}>Logout</button>
+      <button onClick={handleLogout} disabled={isLoggingOut}>
+        {isLoggingOut ? "Logging Out..." : "Logout"}
+      </button>
     </div>
   );
 }
